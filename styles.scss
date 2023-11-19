@@ -60,6 +60,8 @@ body{
 
 
 @for $i from 1 through 3{
+	$pos: 38svh + 15.5svh  * $i;
+
 	.btn#{$i}{
 		display: flex;
 		position: absolute;
@@ -79,12 +81,24 @@ body{
 	
 		animation: move 10s cubic-bezier(0.4,0,0.2,1) infinite;
 		transition: background-position 0.3s;	
-		top: 38svh + 15.5svh * $i;
+		top: $pos; 
+	}
+
+	#dsp#{$i} {
+		display: flex;
+		position: absolute;
+		width: 12svh; height: 7svh;
+		outline: 0.4svh solid;
+
+		border-radius: 5svh;
+		background: white;
+		left: 117svh;
+		top: $pos;
 	}
 }
 
 #l{left: 70svh}
-#r{left: 90svh}
+#r{left: 92svh}
 
 
 @keyframes move {

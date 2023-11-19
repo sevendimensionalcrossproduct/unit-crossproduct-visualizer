@@ -67,6 +67,18 @@ body {
   top: 53.5svh;
 }
 
+#dsp1 {
+  display: flex;
+  position: absolute;
+  width: 12svh;
+  height: 7svh;
+  outline: 0.4svh solid;
+  border-radius: 5svh;
+  background: white;
+  left: 117svh;
+  top: 53.5svh;
+}
+
 .btn2 {
   display: flex;
   position: absolute;
@@ -83,6 +95,18 @@ body {
   outline-color: white;
   animation: move 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   transition: background-position 0.3s;
+  top: 69svh;
+}
+
+#dsp2 {
+  display: flex;
+  position: absolute;
+  width: 12svh;
+  height: 7svh;
+  outline: 0.4svh solid;
+  border-radius: 5svh;
+  background: white;
+  left: 117svh;
   top: 69svh;
 }
 
@@ -105,12 +129,24 @@ body {
   top: 84.5svh;
 }
 
+#dsp3 {
+  display: flex;
+  position: absolute;
+  width: 12svh;
+  height: 7svh;
+  outline: 0.4svh solid;
+  border-radius: 5svh;
+  background: white;
+  left: 117svh;
+  top: 84.5svh;
+}
+
 #l {
   left: 70svh;
 }
 
 #r {
-  left: 90svh;
+  left: 92svh;
 }
 
 @keyframes move {
