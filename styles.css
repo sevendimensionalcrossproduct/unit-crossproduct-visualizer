@@ -12,9 +12,19 @@ body {
   background-image: radial-gradient(rgb(29, 28, 28), black);
 }
 
-.display {
+.triangle {
   display: flex;
   position: absolute;
+  justify-content: center;
+  top: 10px;
+  left: 300px;
+  height: auto;
+  width: auto;
+}
+
+.display {
+  display: flex;
+  position: inherit;
   width: 10svh;
   height: 10svh;
   font-size: 4.5svh;
@@ -29,12 +39,14 @@ body {
 }
 
 #top {
+  position: inherit;
   top: 10svh;
   align-items: center;
   justify-content: center;
 }
 
 #left {
+  position: inherit;
   top: 35svh;
   align-items: center;
   justify-content: center;
@@ -42,6 +54,7 @@ body {
 }
 
 #right {
+  position: inherit;
   top: 35svh;
   align-items: center;
   justify-content: center;
