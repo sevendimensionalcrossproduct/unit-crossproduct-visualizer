@@ -16,8 +16,8 @@ body {
   display: flex;
   position: absolute;
   justify-content: center;
-  top: 100px;
-  left: 300px;
+  top: 30svh;
+  left: 140svh;
   height: 30svh;
   width: 30svh;
 }
@@ -64,8 +64,8 @@ body {
 .input {
   display: flex;
   position: absolute;
-  top: 50svh;
-  left: 50svh;
+  top: 25svh;
+  left: 25svh;
   height: 40svh;
   width: 60svh;
 }
