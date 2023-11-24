@@ -16,10 +16,11 @@ body {
   display: flex;
   position: absolute;
   justify-content: center;
-  top: 10px;
+  top: 100px;
   left: 300px;
-  height: auto;
-  width: auto;
+  background-color: white;
+  height: 30svh;
+  width: 30svh;
 }
 
 .display {
@@ -40,14 +41,14 @@ body {
 
 #top {
   position: inherit;
-  top: 10svh;
+  top: -5svh;
   align-items: center;
   justify-content: center;
 }
 
 #left {
   position: inherit;
-  top: 35svh;
+  top: 25svh;
   align-items: center;
   justify-content: center;
   margin-right: 30svh;
@@ -55,15 +56,25 @@ body {
 
 #right {
   position: inherit;
-  top: 35svh;
+  top: 25svh;
   align-items: center;
   justify-content: center;
   margin-left: 30svh;
 }
 
-.btn1 {
+.input {
   display: flex;
   position: absolute;
+  top: 10svh;
+  left: 10svh;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+}
+
+.btn1 {
+  display: flex;
+  position: inherit;
   width: 7svh;
   height: 7svh;
   font-size: 4.5svh;
@@ -82,7 +93,7 @@ body {
 
 #dsp1 {
   display: flex;
-  position: absolute;
+  position: inherit;
   width: 12svh;
   height: 7svh;
   outline: 0.4svh solid;
@@ -94,7 +105,7 @@ body {
 
 .btn2 {
   display: flex;
-  position: absolute;
+  position: inherit;
   width: 7svh;
   height: 7svh;
   font-size: 4.5svh;
@@ -113,7 +124,7 @@ body {
 
 #dsp2 {
   display: flex;
-  position: absolute;
+  position: inherit;
   width: 12svh;
   height: 7svh;
   outline: 0.4svh solid;
@@ -125,7 +136,7 @@ body {
 
 .btn3 {
   display: flex;
-  position: absolute;
+  position: inherit;
   width: 7svh;
   height: 7svh;
   font-size: 4.5svh;
@@ -144,7 +155,7 @@ body {
 
 #dsp3 {
   display: flex;
-  position: absolute;
+  position: inherit;
   width: 12svh;
   height: 7svh;
   outline: 0.4svh solid;

@@ -12,18 +12,14 @@ body{
     background-image: radial-gradient(rgb(29, 28, 28),black);
 }
 
-
-$height-of-triangle: 30svh;
-$width-of-triangle: 30svh;
 .triangle{
 	display: flex;
 	position: absolute;
 	justify-content: center;
-	top: 100px;
+	top: 10px;
 	left: 300px;
-	background-color: white;
-	height: $height-of-triangle;
-	width: $width-of-triangle;
+	height: auto;
+	width: auto;
 }
 
 .display{
@@ -52,37 +48,33 @@ $width-of-triangle: 30svh;
 
 #top{
 	position: inherit;
-	top: -5svh;
+	top: 10svh;
 	align-items: center;
 	justify-content: center;
 }
 
 #left{
 	position: inherit;
-	top: $height-of-triangle - 5svh;
+	top: 35svh;
 	align-items: center;
 	justify-content: center;
-	margin-right: $width-of-triangle;
+	margin-right: 30svh;
 }
 
 
 #right{
 	position: inherit;
-	top: $height-of-triangle - 5svh;
+	top: 35svh;
 	align-items: center;
 	justify-content: center;
-	margin-left: $width-of-triangle;
+	margin-left: 30svh;
 }
 
 
 .input{
 	display: flex;
 	position: absolute;
-	top:10svh;
-	left: 10svh;
 	background-color: white;
-	height: 10px;
-	width: 10px;
 }
 
 
@@ -91,7 +83,7 @@ $width-of-triangle: 30svh;
 
 	.btn#{$i}{
 		display: flex;
-		position: inherit;
+		position: absolute;
 		width: 7svh; height: 7svh;
 		font-size: 4.5svh;
 		cursor: pointer;
@@ -113,7 +105,7 @@ $width-of-triangle: 30svh;
 
 	#dsp#{$i} {
 		display: flex;
-		position: inherit;
+		position: absolute;
 		width: 12svh; height: 7svh;
 		outline: 0.4svh solid;
 
