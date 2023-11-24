@@ -15,13 +15,14 @@ body{
 
 $height-of-triangle: 30svh;
 $width-of-triangle: 30svh;
+$display-size: 10svh;
 .triangle{
 	display: flex;
 	position: absolute;
 	justify-content: center;
 	top: 100px;
 	left: 300px;
-	background-color: white;
+	//background-color: white;
 	height: $height-of-triangle;
 	width: $width-of-triangle;
 }
@@ -29,7 +30,7 @@ $width-of-triangle: 30svh;
 .display{
 	display: flex;
 	position: inherit;
-	width: 10svh; height: 10svh;
+	width: $display-size; height: $display-size;
 	font-size: 4.5svh;
 
 	//background-image: linear-gradient(45deg, rgb(115, 148, 175), rgb(255, 199, 235), rgb(166, 167, 255), rgb(196, 232, 255));
@@ -52,14 +53,14 @@ $width-of-triangle: 30svh;
 
 #top{
 	position: inherit;
-	top: -5svh;
+	top: - ($display-size * 0.5);
 	align-items: center;
 	justify-content: center;
 }
 
 #left{
 	position: inherit;
-	top: $height-of-triangle - 5svh;
+	top: $height-of-triangle - ($display-size * 0.5);
 	align-items: center;
 	justify-content: center;
 	margin-right: $width-of-triangle;
@@ -68,31 +69,35 @@ $width-of-triangle: 30svh;
 
 #right{
 	position: inherit;
-	top: $height-of-triangle - 5svh;
+	top: $height-of-triangle - ($display-size * 0.5);
 	align-items: center;
 	justify-content: center;
 	margin-left: $width-of-triangle;
 }
 
-
+$pos: 38svh + 15.5svh;
+$rec-height: 40svh;
+$rec-width: 60svh;
+$input-size: 7svh;
+$output-width: 12svh;
 .input{
 	display: flex;
 	position: absolute;
-	top:10svh;
-	left: 10svh;
-	background-color: white;
-	height: 10px;
-	width: 10px;
+	top:50svh;
+	left: 50svh;
+	//background-color: white;
+	height: $rec-height;
+	width: $rec-width;
 }
 
 
 @for $i from 1 through 3{
-	$pos: 38svh + 15.5svh  * $i;
+	$pos: $rec-height * 0.5  * ($i - 1) - ($input-size * 0.5);
 
 	.btn#{$i}{
 		display: flex;
-		position: inherit;
-		width: 7svh; height: 7svh;
+		position: absolute;
+		width: $input-size; height: $input-size;
 		font-size: 4.5svh;
 		cursor: pointer;
 
@@ -113,19 +118,21 @@ $width-of-triangle: 30svh;
 
 	#dsp#{$i} {
 		display: flex;
-		position: inherit;
-		width: 12svh; height: 7svh;
+		position: absolute;
+		width: $output-width; height: $input-size;
 		outline: 0.4svh solid;
 
+		top: $pos;
+;
 		border-radius: 5svh;
 		background: white;
-		left: 117svh;
-		top: $pos;
+		left: $rec-width - ($output-width * 0.5);
 	}
 }
 
-#l{left: 70svh}
-#r{left: 92svh}
+// 70, 92, 117
+#l{left: - ($input-size * 0.5)}
+#r{left: $rec-width * 0.3737}
 
 
 @keyframes move {
