@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(rgb(29, 28, 28),black);
+    background-image: radial-gradient(rgb(13, 13, 13),black);
 }
 
 
@@ -98,22 +98,31 @@ $output-width: 12svh;
 		display: flex;
 		position: absolute;
 		width: $input-size; height: $input-size;
-		font-size: 4.5svh;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.5svh;
 		cursor: pointer;
-
-		background-image: linear-gradient(45deg, rgb(115, 148, 175), rgb(255, 199, 235), rgb(166, 167, 255), rgb(196, 232, 255));
-
-		background-repeat: no-repeat;
-		background-size: 150% 200%;
-		border: none;
+		color: linear-gradient(to right, red, orange);
+ 	 	border: solid transparent;   		
 		border-radius: 50%;
-	
-		outline: 0.4svh solid;
-		outline-color: white;
-	
-		animation: move 10s cubic-bezier(0.4,0,0.2,1) infinite;
-		transition: background-position 0.3s;	
+		background: rgba(255,255,255,0);
 		top: $pos; 
+	
+		&::before{
+    			content: '';
+    			position: absolute;
+    			top: 0; right: 0; bottom: 0; left: 0;
+    			z-index: -1;
+    			margin: -0.7svh;
+    			border-radius: inherit; 
+    			background: linear-gradient(to top, red, orange);
+			mask: radial-gradient(circle, transparent 60%, white 65%);
+		}
+		background: linear-gradient(to top, red, orange); 
+ 		-webkit-background-clip: text;
+		background-clip: text;
+  		color: transparent; 
+  		display: inline-block;
 	}
 
 	#dsp#{$i} {
