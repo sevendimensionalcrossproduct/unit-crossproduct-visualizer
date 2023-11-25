@@ -33,8 +33,6 @@ $display-size: 10svh;
 	width: $display-size; height: $display-size;
 	font-size: 4.5svh;
 
-	//background-image: linear-gradient(45deg, rgb(115, 148, 175), rgb(255, 199, 235), rgb(166, 167, 255), rgb(196, 232, 255));
-
 	background-image: linear-gradient(45deg, rgb(0, 240, 255), rgb(130, 0, 255), rgb(255, 0, 115));
 
 	background-repeat: no-repeat;
@@ -102,12 +100,19 @@ $output-width: 12svh;
 		align-items: center;
 		font-size: 3.5svh;
 		cursor: pointer;
-		color: linear-gradient(to right, red, orange);
  	 	border: solid transparent;   		
 		border-radius: 50%;
 		background: rgba(255,255,255,0);
 		top: $pos; 
 	
+		$backgrounds:(
+			linear-gradient(to top, red, orange),
+  			linear-gradient(to top, blue, green),
+  			linear-gradient(to top, yellow, purple),
+			linear-gradient(to top, red, orange)
+
+		);
+
 		&::before{
     			content: '';
     			position: absolute;
@@ -115,11 +120,11 @@ $output-width: 12svh;
     			z-index: -1;
     			margin: -0.7svh;
     			border-radius: inherit; 
-    			background: linear-gradient(to top, red, orange);
+    			background: nth($backgrounds, $i);
 			mask: radial-gradient(circle, transparent 60%, white 65%);
 		}
-		background: linear-gradient(to top, red, orange); 
- 		-webkit-background-clip: text;
+		background: nth($backgrounds, $i);
+		-webkit-background-clip: text;
 		background-clip: text;
   		color: transparent; 
   		display: inline-block;

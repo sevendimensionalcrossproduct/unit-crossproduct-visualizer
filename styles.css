@@ -79,7 +79,6 @@ body {
   align-items: center;
   font-size: 3.5svh;
   cursor: pointer;
-  color: linear-gradient(to right, red, orange);
   border: solid transparent;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
@@ -125,12 +124,11 @@ body {
   align-items: center;
   font-size: 3.5svh;
   cursor: pointer;
-  color: linear-gradient(to right, red, orange);
   border: solid transparent;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   top: 16.5svh;
-  background: linear-gradient(to top, red, orange);
+  background: linear-gradient(to top, blue, green);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -146,7 +144,7 @@ body {
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
-  background: linear-gradient(to top, red, orange);
+  background: linear-gradient(to top, blue, green);
   mask: radial-gradient(circle, transparent 60%, white 65%);
 }
 
@@ -171,12 +169,11 @@ body {
   align-items: center;
   font-size: 3.5svh;
   cursor: pointer;
-  color: linear-gradient(to right, red, orange);
   border: solid transparent;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   top: 36.5svh;
-  background: linear-gradient(to top, red, orange);
+  background: linear-gradient(to top, yellow, purple);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -192,7 +189,7 @@ body {
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
-  background: linear-gradient(to top, red, orange);
+  background: linear-gradient(to top, yellow, purple);
   mask: radial-gradient(circle, transparent 60%, white 65%);
 }
 
