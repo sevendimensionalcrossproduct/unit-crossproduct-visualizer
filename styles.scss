@@ -106,9 +106,9 @@ $output-width: 12svh;
 		top: $pos; 
 	
 		$backgrounds:(
-			linear-gradient(to top, #8502cef7, #cc014d),
-  			linear-gradient(to top, blue, green),
-  			linear-gradient(to top, yellow, purple),
+			linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69),
+  			linear-gradient(to top, #963fff, #2fc5d5),
+  			linear-gradient(to top, #ff0078, #ff8f00),
 			linear-gradient(to top, red, orange)
 
 		);

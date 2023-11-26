@@ -83,7 +83,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   top: -3.5svh;
-  background: linear-gradient(to top, rgba(133, 2, 206, 0.968627451), #cc014d);
+  background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -99,7 +99,7 @@ body {
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
-  background: linear-gradient(to top, rgba(133, 2, 206, 0.968627451), #cc014d);
+  background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
   mask: radial-gradient(circle, transparent 60%, white 65%);
 }
 
@@ -128,7 +128,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   top: 16.5svh;
-  background: linear-gradient(to top, blue, green);
+  background: linear-gradient(to top, #963fff, #2fc5d5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -144,7 +144,7 @@ body {
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
-  background: linear-gradient(to top, blue, green);
+  background: linear-gradient(to top, #963fff, #2fc5d5);
   mask: radial-gradient(circle, transparent 60%, white 65%);
 }
 
@@ -173,7 +173,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   top: 36.5svh;
-  background: linear-gradient(to top, yellow, purple);
+  background: linear-gradient(to top, #ff0078, #ff8f00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -189,7 +189,7 @@ body {
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
-  background: linear-gradient(to top, yellow, purple);
+  background: linear-gradient(to top, #ff0078, #ff8f00);
   mask: radial-gradient(circle, transparent 60%, white 65%);
 }
 
