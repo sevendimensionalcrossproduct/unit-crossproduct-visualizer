@@ -92,7 +92,7 @@ $backgrounds:(
 	linear-gradient(to top, red, orange)
 );
 
-#button{
+.button{
 		display: flex;
 		margin: 3svh;
 		width: 7svh; height: 7svh;
@@ -107,27 +107,31 @@ $backgrounds:(
 		}
 }
 
-@for $i from 1 through 3{
-	.btn#{$i}{
-		position: relative;
-		border: solid 0.2svh transparent;
-		border-radius: 50%;
-		background: nth($backgrounds, $i);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		display: inline-block;
+@mixin buttonStyles($i){
+	position: relative;
+	border: solid 0.2svh transparent;
+	border-radius: 50%;
+	background: nth($backgrounds, $i);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
 	
-		&::before{
-			content: '';
-			position: absolute;
-			top: 0svh; right: 0svh; bottom: 0svh; left: 0svh;
-			z-index:-1;
-			margin: -0.7svh;
-			border-radius: inherit;
-			background: nth($backgrounds, $i);
-			mask: radial-gradient(circle, transparent 60%, white 62%);
-		}
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0svh; right: 0svh; bottom: 0svh; left: 0svh;
+		z-index:-1;
+		margin: -0.7svh;
+		border-radius: inherit;
+		background: nth($backgrounds, $i);
+		mask: radial-gradient(circle, transparent 60%, white 62%);
+	}
+}
+
+@for $i from 1 through 3{
+	#lbtn#{$i}, #rbtn#{$i}{
+		@include buttonStyles($i);
 	}
 }
 
@@ -146,6 +150,34 @@ $backgrounds:(
   100%{
     background-position: 0% 0;
   }
+}
+
+@mixin clickedStyles(){
+	position: relative;
+	border: solid 0.2svh transparent;
+	border-radius: 50%;
+	background: white;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
+	
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0svh; right: 0svh; bottom: 0svh; left: 0svh;
+		z-index:-1;
+		margin: -0.7svh;
+		border-radius: inherit;
+		background: white;
+		mask: radial-gradient(circle, transparent 60%, white 62%);
+	}
+}
+
+@for $i from 1 through 3{
+	#lbtn#{$i}clicked, #rclicked#{$i}clicked{
+		@include clickedStyles();
+	}
 }
 
 /*
