@@ -9,9 +9,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgb(17, 17, 17),black);
+    background-image: linear-gradient(to bottom, rgb(76, 41, 111),#884227);
 }
 
+.glass{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh;
+  border: 0.2vh solid rgba(20, 20, 20, 0.1);
+  border-radius: 5vh;
+  box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.7);
+  backdrop-filter: blur(2vh);
+  -webkit-backdrop-filter: blur(2vh);
+  background: rgba(255, 255, 255, 0.3);
+}
 
 $height-of-triangle: 30svh;
 $width-of-triangle: 30svh;
@@ -29,7 +41,7 @@ $display-size: 10svh;
 
 .display{
 	display: flex;
-	position: inherit;
+	position: absolute;
 	width: $display-size; height: $display-size;
 	font-size: 4.5svh;
 
@@ -73,80 +85,49 @@ $display-size: 10svh;
 	margin-left: $width-of-triangle;
 }
 
-$pos: 38svh + 15.5svh;
-$rec-height: 40svh;
-$rec-width: 60svh;
-$input-size: 7svh;
-$output-width: 12svh;
-.input{
-	display: flex;
-	position: absolute;
-	top:25svh;
-	left: 25svh;
-	//background-color: white;
-	height: $rec-height;
-	width: $rec-width;
-}
+$backgrounds:(
+	linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69),
+	linear-gradient(to top, #963fff, #2fc5d5),
+	linear-gradient(to top, #ff0078, #ff8f00),
+	linear-gradient(to top, red, orange)
+);
 
-
-@for $i from 1 through 3{
-	$pos: $rec-height * 0.5  * ($i - 1) - ($input-size * 0.5);
-
-	.btn#{$i}{
+#button{
 		display: flex;
-		position: absolute;
-		width: $input-size; height: $input-size;
+		margin: 3svh;
+		width: 7svh; height: 7svh;
 		justify-content: center;
 		align-items: center;
 		font-size: 3.5svh;
 		cursor: pointer;
- 	 	border: solid transparent;   		
+}
+
+@for $i from 1 through 3{
+	.btn#{$i}{
+		position: relative;
+		border: solid transparent;
 		border-radius: 50%;
-		background: rgba(255,255,255,0);
-		top: $pos; 
-	
-		$backgrounds:(
-			linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69),
-  			linear-gradient(to top, #963fff, #2fc5d5),
-  			linear-gradient(to top, #ff0078, #ff8f00),
-			linear-gradient(to top, red, orange)
-
-		);
-
-		&::before{
-    			content: '';
-    			position: absolute;
-    			top: 0; right: 0; bottom: 0; left: 0;
-    			z-index: -1;
-    			margin: -0.7svh;
-    			border-radius: inherit; 
-    			background: nth($backgrounds, $i);
-			mask: radial-gradient(circle, transparent 60%, white 65%);
-		}
 		background: nth($backgrounds, $i);
 		-webkit-background-clip: text;
 		background-clip: text;
-  		color: transparent; 
-  		display: inline-block;
-	}
-
-	#dsp#{$i} {
-		display: flex;
-		position: absolute;
-		width: $output-width; height: $input-size;
-		outline: 0.4svh solid;
-
-		top: $pos;
-;
-		border-radius: 5svh;
-		background: white;
-		left: $rec-width - ($output-width * 0.5);
+		color: transparent;
+		display: inline-block;
+	
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			z-index:-1;
+			margin: -0.7svh;
+			border-radius: inherit;
+			background: nth($backgrounds, $i);
+			mask: radial-gradient(circle, transparent 60%, white 65%);
+		}
 	}
 }
 
-// 70, 92, 117
-#l{left: - ($input-size * 0.5)}
-#r{left: $rec-width * 0.3737}
+#l{left: 20svh}
+#r{left: 55svh}
 
 
 @keyframes move {
@@ -161,3 +142,18 @@ $output-width: 12svh;
     background-position: 0% 0;
   }
 }
+
+/*
+	#dsp#{$i} {
+		display: flex;
+		position: absolute;
+		width: $output-width; height: $input-size;
+		outline: 0.4svh solid;
+
+		top: $pos;
+;
+		border-radius: 5svh;
+		background: white;
+		left: $rec-width - ($output-width * 0.5);
+		color: transparent;
+*/
