@@ -16,12 +16,12 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 3vh;
-  border: 0.2vh solid rgba(20, 20, 20, 0.1);
-  border-radius: 5vh;
-  box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.7);
-  backdrop-filter: blur(2vh);
-  -webkit-backdrop-filter: blur(2vh);
+  padding: 3svh;
+  border: 0.2svh solid rgba(20, 20, 20, 0.1);
+  border-radius: 5svh;
+  box-shadow: 0.2svh 0.7svh 1svh rgba(35, 35, 35, 0.7);
+  backdrop-filter: blur(2svh);
+  -webkit-backdrop-filter: blur(2svh);
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -91,7 +91,7 @@ body {
 
 .btn1 {
   position: relative;
-  border: solid transparent;
+  border: solid 0.2svh transparent;
   border-radius: 50%;
   background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
   -webkit-background-clip: text;
@@ -102,20 +102,20 @@ body {
 .btn1::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0svh;
+  right: 0svh;
+  bottom: 0svh;
+  left: 0svh;
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
   background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
-  mask: radial-gradient(circle, transparent 60%, white 65%);
+  mask: radial-gradient(circle, transparent 60%, white 62%);
 }
 
 .btn2 {
   position: relative;
-  border: solid transparent;
+  border: solid 0.2svh transparent;
   border-radius: 50%;
   background: linear-gradient(to top, #963fff, #2fc5d5);
   -webkit-background-clip: text;
@@ -126,20 +126,20 @@ body {
 .btn2::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0svh;
+  right: 0svh;
+  bottom: 0svh;
+  left: 0svh;
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
   background: linear-gradient(to top, #963fff, #2fc5d5);
-  mask: radial-gradient(circle, transparent 60%, white 65%);
+  mask: radial-gradient(circle, transparent 60%, white 62%);
 }
 
 .btn3 {
   position: relative;
-  border: solid transparent;
+  border: solid 0.2svh transparent;
   border-radius: 50%;
   background: linear-gradient(to top, #ff0078, #ff8f00);
   -webkit-background-clip: text;
@@ -150,15 +150,15 @@ body {
 .btn3::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0svh;
+  right: 0svh;
+  bottom: 0svh;
+  left: 0svh;
   z-index: -1;
   margin: -0.7svh;
   border-radius: inherit;
   background: linear-gradient(to top, #ff0078, #ff8f00);
-  mask: radial-gradient(circle, transparent 60%, white 65%);
+  mask: radial-gradient(circle, transparent 60%, white 62%);
 }
 
 #l {
