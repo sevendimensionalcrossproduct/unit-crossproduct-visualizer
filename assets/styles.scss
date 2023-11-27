@@ -94,12 +94,18 @@ $backgrounds:(
 
 .button{
 		display: flex;
+		position: relative;
+		border: solid 0.2svh transparent;
+		border-radius: 50%;
 		margin: 3svh;
+		-webkit-background-clip: text;
+		background-clip: text;
 		width: 7svh; height: 7svh;
 		justify-content: center;
 		align-items: center;
 		font-size: 3.5svh;
 		cursor: pointer;
+		display: inline-block;
 		transition: transform 0.3s ease;
 
 		&:hover{
@@ -108,14 +114,9 @@ $backgrounds:(
 }
 
 @mixin buttonStyles($i){
-	position: relative;
-	border: solid 0.2svh transparent;
-	border-radius: 50%;
 	background: nth($backgrounds, $i);
-	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-	display: inline-block;
 	
 	&::before{
 		content: '';
@@ -152,17 +153,26 @@ $backgrounds:(
   }
 }
 
-@mixin clickedStyles(){
-	position: relative;
-	border: solid 0.2svh transparent;
-	border-radius: 50%;
-	background: white;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	display: inline-block;
-	
-	&::before{
+.clickedStyles{
+		display: flex;
+		position: relative;
+		border: solid 0.2svh transparent;
+		border-radius: 50%;
+		margin: 3svh;
+		-webkit-background-clip: text;
+		background-clip: text;
+		width: 7svh; height: 7svh;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.5svh;
+		cursor: pointer;
+		display: inline-block;
+		transition: transform 0.3s ease;
+		color: white;
+
+		background-clip: text;
+		
+		&::after{
 		content: '';
 		position: absolute;
 		top: 0svh; right: 0svh; bottom: 0svh; left: 0svh;
@@ -171,14 +181,15 @@ $backgrounds:(
 		border-radius: inherit;
 		background: white;
 		mask: radial-gradient(circle, transparent 60%, white 62%);
-	}
+		
+		}
+
+		&:hover{
+			transform: scale(1.2);
+		}
+
 }
 
-@for $i from 1 through 3{
-	#lbtn#{$i}clicked, #rclicked#{$i}clicked{
-		@include clickedStyles();
-	}
-}
 
 /*
 	#dsp#{i} {

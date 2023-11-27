@@ -76,13 +76,19 @@ body {
 
 .button {
   display: flex;
+  position: relative;
+  border: solid 0.2svh transparent;
+  border-radius: 50%;
   margin: 3svh;
+  -webkit-background-clip: text;
+  background-clip: text;
   width: 7svh;
   height: 7svh;
   justify-content: center;
   align-items: center;
   font-size: 3.5svh;
   cursor: pointer;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 .button:hover {
@@ -90,14 +96,9 @@ body {
 }
 
 #lbtn1, #rbtn1 {
-  position: relative;
-  border: solid 0.2svh transparent;
-  border-radius: 50%;
   background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  display: inline-block;
 }
 #lbtn1::before, #rbtn1::before {
   content: "";
@@ -114,14 +115,9 @@ body {
 }
 
 #lbtn2, #rbtn2 {
-  position: relative;
-  border: solid 0.2svh transparent;
-  border-radius: 50%;
   background: linear-gradient(to top, #963fff, #2fc5d5);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  display: inline-block;
 }
 #lbtn2::before, #rbtn2::before {
   content: "";
@@ -138,14 +134,9 @@ body {
 }
 
 #lbtn3, #rbtn3 {
-  position: relative;
-  border: solid 0.2svh transparent;
-  border-radius: 50%;
   background: linear-gradient(to top, #ff0078, #ff8f00);
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  display: inline-block;
 }
 #lbtn3::before, #rbtn3::before {
   content: "";
@@ -180,17 +171,26 @@ body {
     background-position: 0% 0;
   }
 }
-#lbtn1clicked, #rclicked1clicked {
+.clickedStyles {
+  display: flex;
   position: relative;
   border: solid 0.2svh transparent;
   border-radius: 50%;
-  background: white;
+  margin: 3svh;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  width: 7svh;
+  height: 7svh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5svh;
+  cursor: pointer;
   display: inline-block;
+  transition: transform 0.3s ease;
+  color: white;
+  background-clip: text;
 }
-#lbtn1clicked::before, #rclicked1clicked::before {
+.clickedStyles::after {
   content: "";
   position: absolute;
   top: 0svh;
@@ -203,53 +203,8 @@ body {
   background: white;
   mask: radial-gradient(circle, transparent 60%, white 62%);
 }
-
-#lbtn2clicked, #rclicked2clicked {
-  position: relative;
-  border: solid 0.2svh transparent;
-  border-radius: 50%;
-  background: white;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
-#lbtn2clicked::before, #rclicked2clicked::before {
-  content: "";
-  position: absolute;
-  top: 0svh;
-  right: 0svh;
-  bottom: 0svh;
-  left: 0svh;
-  z-index: -1;
-  margin: -0.7svh;
-  border-radius: inherit;
-  background: white;
-  mask: radial-gradient(circle, transparent 60%, white 62%);
-}
-
-#lbtn3clicked, #rclicked3clicked {
-  position: relative;
-  border: solid 0.2svh transparent;
-  border-radius: 50%;
-  background: white;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
-#lbtn3clicked::before, #rclicked3clicked::before {
-  content: "";
-  position: absolute;
-  top: 0svh;
-  right: 0svh;
-  bottom: 0svh;
-  left: 0svh;
-  z-index: -1;
-  margin: -0.7svh;
-  border-radius: inherit;
-  background: white;
-  mask: radial-gradient(circle, transparent 60%, white 62%);
+.clickedStyles:hover {
+  transform: scale(1.2);
 }
 
 /*
