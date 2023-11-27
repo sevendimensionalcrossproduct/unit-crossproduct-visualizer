@@ -1,17 +1,194 @@
-/* Error: Undefined variable.
- *     ,
- * 147 |     #dsp#{$i} {
- *     |           ^^
- *     '
- *   styles.scss 147:8  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a     \2577 \a 147 \2502      #dsp#{$i} {\a     \2502            ^^\a     \2575 \a   styles.scss 147:8  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgb(76, 41, 111), #884227);
+}
+
+.glass {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh;
+  border: 0.2vh solid rgba(20, 20, 20, 0.1);
+  border-radius: 5vh;
+  box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.7);
+  backdrop-filter: blur(2vh);
+  -webkit-backdrop-filter: blur(2vh);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.triangle {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 30svh;
+  left: 140svh;
+  height: 30svh;
+  width: 30svh;
+}
+
+.display {
+  display: flex;
+  position: absolute;
+  width: 10svh;
+  height: 10svh;
+  font-size: 4.5svh;
+  background-image: linear-gradient(45deg, rgb(0, 240, 255), rgb(130, 0, 255), rgb(255, 0, 115));
+  background-repeat: no-repeat;
+  background-size: 150% 200%;
+  border-radius: 50%;
+  outline: 0.4svh solid;
+  outline-color: white;
+  animation: move 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transition: background-position 0.3s;
+}
+
+#top {
+  position: inherit;
+  top: -5svh;
+  align-items: center;
+  justify-content: center;
+}
+
+#left {
+  position: inherit;
+  top: 25svh;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30svh;
+}
+
+#right {
+  position: inherit;
+  top: 25svh;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30svh;
+}
+
+#button {
+  display: flex;
+  margin: 3svh;
+  width: 7svh;
+  height: 7svh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5svh;
+  cursor: pointer;
+}
+
+.btn1 {
+  position: relative;
+  border: solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -0.7svh;
+  border-radius: inherit;
+  background: linear-gradient(to top, rgba(145, 35, 206, 0.97), #ea1c69);
+  mask: radial-gradient(circle, transparent 60%, white 65%);
+}
+
+.btn2 {
+  position: relative;
+  border: solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to top, #963fff, #2fc5d5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -0.7svh;
+  border-radius: inherit;
+  background: linear-gradient(to top, #963fff, #2fc5d5);
+  mask: radial-gradient(circle, transparent 60%, white 65%);
+}
+
+.btn3 {
+  position: relative;
+  border: solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to top, #ff0078, #ff8f00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.btn3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -0.7svh;
+  border-radius: inherit;
+  background: linear-gradient(to top, #ff0078, #ff8f00);
+  mask: radial-gradient(circle, transparent 60%, white 65%);
+}
+
+#l {
+  left: 20svh;
+}
+
+#r {
+  left: 55svh;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+/*
+	#dspi {
+		display: flex;
+		position: absolute;
+		width: output-width; height: input-size;
+		outline: 0.4svh solid;
+
+		top: $pos;
+;
+		border-radius: 5svh;
+		background: white;
+		left: rec-width - (output-width * 0.5);
+		color: transparent;
+*/
+
+/*# sourceMappingURL=styles.css.map */

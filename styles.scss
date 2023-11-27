@@ -144,16 +144,16 @@ $backgrounds:(
 }
 
 /*
-	#dsp#{$i} {
+	#dsp#{i} {
 		display: flex;
 		position: absolute;
-		width: $output-width; height: $input-size;
+		width: output-width; height: input-size;
 		outline: 0.4svh solid;
 
 		top: $pos;
 ;
 		border-radius: 5svh;
 		background: white;
-		left: $rec-width - ($output-width * 0.5);
+		left: rec-width - (output-width * 0.5);
 		color: transparent;
 */
