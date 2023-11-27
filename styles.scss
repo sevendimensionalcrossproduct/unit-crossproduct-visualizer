@@ -22,7 +22,7 @@ body{
   box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.7);
   backdrop-filter: blur(2vh);
   -webkit-backdrop-filter: blur(2vh);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 $height-of-triangle: 30svh;
@@ -100,6 +100,11 @@ $backgrounds:(
 		align-items: center;
 		font-size: 3.5svh;
 		cursor: pointer;
+		transition: transform 0.3s ease;
+
+		&:hover{
+			transform: scale(1.2);
+		}
 }
 
 @for $i from 1 through 3{
@@ -127,7 +132,7 @@ $backgrounds:(
 }
 
 #l{left: 20svh}
-#r{left: 55svh}
+#r{left: 65svh}
 
 
 @keyframes move {

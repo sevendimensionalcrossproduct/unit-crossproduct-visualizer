@@ -22,7 +22,7 @@ body {
   box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.7);
   backdrop-filter: blur(2vh);
   -webkit-backdrop-filter: blur(2vh);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .triangle {
@@ -83,6 +83,10 @@ body {
   align-items: center;
   font-size: 3.5svh;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#button:hover {
+  transform: scale(1.2);
 }
 
 .btn1 {
@@ -162,7 +166,7 @@ body {
 }
 
 #r {
-  left: 55svh;
+  left: 65svh;
 }
 
 @keyframes move {
