@@ -188,6 +188,8 @@ body {
   display: inline-block;
   transition: transform 0.3s ease;
   color: white;
+  box-shadow: 0vh 0vh 2vh #ffffff;
+  text-shadow: 0vh 0vh 2vh #ffffff;
   background-clip: text;
 }
 .clickedStyles::after {
