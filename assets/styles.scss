@@ -169,7 +169,7 @@ $backgrounds:(
 		display: inline-block;
 		transition: transform 0.3s ease;
 		color: white;
-		box-shadow:  0vh 0vh 2vh  #ffffff;
+		box-shadow:  0vh 0vh 2vh  #ffffff, inset 0vh -0vh 1vh #fff;
 		text-shadow: 0vh 0vh 2vh #ffffff;
 		background-clip: text;
 		
@@ -181,8 +181,10 @@ $backgrounds:(
 		margin: -0.7svh;
 		border-radius: inherit;
 		background: white;
+		box-shadow: inset 0vh 0vh 2vh #ffffff;
 
-		mask: radial-gradient(circle, transparent 60%, white 62%);
+
+		mask: radial-gradient(circle, transparent 55%, white 60%);
 		
 		}
 
